@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>index3</title>
+  <title>Ayush Tripathi - CV</title>
   <meta name="description" content="Single-page CV website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,7 +46,7 @@
     .container {
       max-width: 1100px;
       margin: 24px auto;
-      padding: 0 16px 80px; /* bottom room for print btn */
+      padding: 0 16px 80px;
     }
 
     header.card {
@@ -74,6 +74,7 @@
       font-weight: 600;
       cursor: pointer;
       transition: transform .06s ease, background .2s ease, border-color .2s ease;
+      font-size: 14px;
     }
     .btn:hover { transform: translateY(-1px); }
     .btn.primary { background: var(--accent); border-color: var(--accent); }
@@ -85,8 +86,12 @@
       gap: 16px;
     }
     .avatar {
-      width: 200px; height: 200px; border-radius: 50%; object-fit: cover;
+      width: 200px; 
+      height: 200px; 
+      border-radius: 50%; 
+      object-fit: cover;
       border: 2px solid var(--border);
+      flex-shrink: 0;
     }
     h1 { margin: 0; font-size: 28px; line-height: 1.2; }
     .role { color: var(--muted); font-weight: 500; }
@@ -105,7 +110,13 @@
       padding: 20px;
     }
 
-    .section-title { font-size: 14px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
+    .section-title { 
+      font-size: 14px; 
+      letter-spacing: .12em; 
+      text-transform: uppercase; 
+      color: var(--muted); 
+      margin: 0 0 12px; 
+    }
 
     .list { display: grid; gap: 12px; }
 
@@ -116,35 +127,220 @@
     .item .desc { color: var(--muted); }
 
     .pill {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border);
-      font-size: 12px; font-weight: 600; color: var(--muted);
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px;
+      padding: 6px 10px; 
+      border-radius: 999px; 
+      border: 1px solid var(--border);
+      font-size: 12px; 
+      font-weight: 600; 
+      color: var(--muted);
     }
     .pills { display: flex; flex-wrap: wrap; gap: 8px; }
 
     .skills {
       display: grid; gap: 10px;
     }
-    .skill-row { display: grid; grid-template-columns: 140px 1fr; gap: 10px; align-items: center; }
-    .bar { height: 10px; background: #0f172a22; border-radius: 999px; overflow: hidden; border: 1px solid var(--border); }
-    .bar > span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); width: 0; }
+    .skill-row { 
+      display: grid; 
+      grid-template-columns: 140px 1fr; 
+      gap: 10px; 
+      align-items: center; 
+    }
+    .bar { 
+      height: 10px; 
+      background: #0f172a22; 
+      border-radius: 999px; 
+      overflow: hidden; 
+      border: 1px solid var(--border); 
+    }
+    .bar > span { 
+      display: block; 
+      height: 100%; 
+      background: linear-gradient(90deg, var(--accent), var(--accent-2)); 
+      width: 0; 
+    }
 
     .projects {
-      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;
+      display: grid; 
+      grid-template-columns: repeat(2, minmax(0, 1fr)); 
+      gap: 16px;
     }
     .project {
-      border: 1px solid var(--border); border-radius: 16px; padding: 16px; background: linear-gradient(180deg, rgba(124,58,237,0.07), rgba(34,197,94,0.07));
+      border: 1px solid var(--border); 
+      border-radius: 16px; 
+      padding: 16px; 
+      background: linear-gradient(180deg, rgba(124,58,237,0.07), rgba(34,197,94,0.07));
     }
     .project h4 { margin: 0 0 6px; }
 
-    footer.card { margin-top: 20px; text-align: center; color: var(--muted); }
+    footer.card { 
+      margin-top: 20px; 
+      text-align: center; 
+      color: var(--muted); 
+    }
 
-    /* Responsive */
+    /* Tablet Responsive */
     @media (max-width: 900px) {
       .grid { grid-template-columns: 1fr; }
-      header.card { grid-template-columns: 1fr; }
-      .actions { justify-content: flex-start; }
       .projects { grid-template-columns: 1fr; }
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .container {
+        margin: 12px auto;
+        padding: 0 12px 60px;
+      }
+
+      header.card {
+        grid-template-columns: 1fr;
+        padding: 16px;
+        border-radius: 16px;
+        position: relative;
+      }
+
+      .headline {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+      }
+
+      .avatar {
+        width: 120px;
+        height: 120px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .role {
+        font-size: 14px;
+      }
+
+      .actions {
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 12px 14px;
+      }
+
+      .card {
+        padding: 16px;
+        border-radius: 16px;
+      }
+
+      .grid {
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .section-title {
+        font-size: 12px;
+      }
+
+      .skill-row {
+        grid-template-columns: 100px 1fr;
+        gap: 8px;
+      }
+
+      .skill-row > div:first-child {
+        font-size: 14px;
+      }
+
+      .projects {
+        gap: 12px;
+      }
+
+      .project {
+        padding: 12px;
+      }
+
+      .project h4 {
+        font-size: 16px;
+      }
+
+      .item .top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+
+      .item .title {
+        font-size: 15px;
+      }
+
+      .item .meta {
+        font-size: 13px;
+      }
+
+      .pill {
+        font-size: 11px;
+        padding: 5px 8px;
+      }
+
+      footer.card {
+        margin-top: 12px;
+        font-size: 14px;
+      }
+    }
+
+    /* Small Mobile */
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 8px 50px;
+      }
+
+      header.card {
+        padding: 12px;
+      }
+
+      .avatar {
+        width: 100px;
+        height: 100px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .pills {
+        gap: 6px;
+      }
+
+      .pill {
+        font-size: 10px;
+        padding: 4px 7px;
+      }
+
+      .card {
+        padding: 12px;
+      }
+
+      .skill-row {
+        grid-template-columns: 80px 1fr;
+        gap: 6px;
+      }
+
+      .skill-row > div:first-child {
+        font-size: 12px;
+      }
+
+      .bar {
+        height: 8px;
+      }
+
+      .project h4 {
+        font-size: 15px;
+      }
+
+      .project .desc {
+        font-size: 13px;
+      }
     }
 
     /* Print */
@@ -166,7 +362,7 @@
           <h1>Ayush Tripathi</h1>
           <div class="role">Programmer • Lucknow, India</div>
           <div class="pills" style="margin-top:8px">
-            <span class="pill">Email: <a href="mailto:you@example.com">tripathiayush5555@gmail.com</a></span>
+            <span class="pill">Email: <a href="mailto:tripathiayush5555@gmail.com">tripathiayush5555@gmail.com</a></span>
             <span class="pill">Phone: +91 9918086269</span>
             <span class="pill">LinkedIn: <a href="https://www.linkedin.com/in/ayush-tripathi-1bb39b268" target="_blank" rel="noopener noreferrer">triayush6269</a></span>
             <span class="pill">GitHub: <a href="https://github.com/ayushtri6269" target="_blank" rel="noopener noreferrer">triayush6269</a></span>
@@ -205,7 +401,7 @@
             <div class="bar"><span style="width: 90%"></span></div>
           </div>
           <div class="skill-row">
-            <div>App Development </div>
+            <div>App Development</div>
             <div class="bar"><span style="width: 70%"></span></div>
           </div>
         </div>
@@ -285,7 +481,7 @@
         <h3 class="section-title" style="margin-top:18px">Certifications</h3>
         <div class="pills">
           <span class="pill">Apna College Full Stack Development</span>
-          <span class="pill">Apna College DSA With Java </span>
+          <span class="pill">Apna College DSA With Java</span>
           <span class="pill">IBM Python 101 For Data Science</span>
           <span class="pill">IBM Data Science 101</span>
           <span class="pill">IBM Cognos Analytics</span>
@@ -299,14 +495,12 @@
   </div>
 
   <script>
-    // Persisted theme toggle
-    const root = document.documentElement;
-    const saved = localStorage.getItem('cv-theme');
-    if (saved === 'light') document.body.classList.add('light');
-
+    // Theme toggle without localStorage
+    const themeState = { isLight: false };
+    
     document.getElementById('themeToggle').addEventListener('click', () => {
       document.body.classList.toggle('light');
-      localStorage.setItem('cv-theme', document.body.classList.contains('light') ? 'light' : 'dark');
+      themeState.isLight = !themeState.isLight;
     });
 
     // Dynamic year
@@ -314,4 +508,3 @@
   </script>
 </body>
 </html>
-
